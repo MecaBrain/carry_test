@@ -1,9 +1,11 @@
 import nibabel as nb
 import numpy as np
 import os
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
-ATLAS_FOLDER = '/hpc/meca/users/velly/Python/RESOURCES/TEMPLATE'
+ATLAS_FOLDER = '/mnt/data/owncloud/TP_meca_retraite/atlas_for_figs'
 
 def linear_interp_RGBA_colormap(val_color_A, val_color_B, res=256):
     '''
@@ -52,6 +54,17 @@ def invert_dict_label_name(default_label_name, lower = False):
         inv_label_name = {v: k for k, v in default_label_name.iteritems()}
     return inv_label_name
 
+
+def readLookupTable(fname_in, separator=';'):
+    f = open(fname_in, 'rU')
+    l = f.readlines()
+    f.close()
+    d = {}
+    for li in l[1:]:
+        spl = li.rstrip().split(separator)
+        d[int(spl[0])] = spl[1]
+
+    return d
 
 def readTable(fname_in,separator=','):
     '''
