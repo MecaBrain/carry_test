@@ -7,8 +7,8 @@ import seaborn as sns
 
 if __name__ == "__main__":
     # load the tables that will be used in this tutorial
-    df_morphometry = pd.read_csv('/mnt/data/owncloud/TP_meca_retraite/morpho_stats_abide_full_sulci_left_all_features_Z_10.csv', sep=',')
-    df_phenotype = pd.read_excel('/mnt/data/owncloud/TP_meca_retraite/Phenotypic_V1_0b_traitements_visual_check_GA.xls', 'Feuille1')
+    df_morphometry = pd.read_csv('/hpc/meca/users/auzias/test_retraite/morpho_stats_abide_full_sulci_left_all_features_Z_10.csv', sep=',')
+    df_phenotype = pd.read_excel('/hpc/meca/users/auzias/test_retraite/Phenotypic_V1_0b_traitements_visual_check_GA.xls', 'Feuille1')
 
     # we can concatenate the tables while correspondence is given by a specified column
     df_pheno_morpho = df_phenotype.merge(df_morphometry, left_on='SUB_ID', right_on='subjects', how='inner')

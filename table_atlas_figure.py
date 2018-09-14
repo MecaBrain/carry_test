@@ -3,6 +3,7 @@ import numpy as np
 import os
 import matplotlib
 matplotlib.use('TkAgg')
+print(matplotlib.__version__)
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 ATLAS_FOLDER = '/hpc/meca/users/velly/Python/RESOURCES/TEMPLATE'
