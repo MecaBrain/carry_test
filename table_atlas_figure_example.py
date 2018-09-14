@@ -13,7 +13,7 @@ if __name__ == "__main__":
     #clmap_neg = tA.linear_interp_RGBA_colormap([-30, 0, 0, 255, 255], [30, 255, 0, 0, 255], res=10)
     print(clmap_neg)
 
-    table_in_colors = '/mnt/data/owncloud/TP_meca_retraite/raw_dti_value_FS-niftyREG_norm_dfa(noUSnoJHUnoGlob).csv'
+    table_in_colors = '/hpc/meca/users/auzias/test_retraite/raw_dti_value_FS-niftyREG_norm_dfa(noUSnoJHUnoGlob).csv'
 
     (col_names_i, row_names, data) = tA.readTable(table_in_colors, ';')
     print('nb cols = ', len(col_names_i))
@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
 
     for ind_grp,grp in enumerate(row_names):
-        output_im = '/mnt/data/owncloud/TP_meca_retraite/raw_dti_value_FS-niftyREG_norm_dfa(noUSnoJHUnoGlob)_'+grp+'.png'
+        output_im = '/hpc/meca/users/auzias/test_retraite/raw_dti_value_FS-niftyREG_norm_dfa(noUSnoJHUnoGlob)_'+grp+'.png'
 
         table_data = data[ind_grp, 1:].squeeze()
         print('min of data = ', min(table_data))

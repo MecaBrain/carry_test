@@ -5,7 +5,7 @@ import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
-ATLAS_FOLDER = '/mnt/data/owncloud/TP_meca_retraite/atlas_for_figs'
+ATLAS_FOLDER = '/hpc/meca/users/velly/Python/RESOURCES/TEMPLATE'
 
 def linear_interp_RGBA_colormap(val_color_A, val_color_B, res=256):
     '''
