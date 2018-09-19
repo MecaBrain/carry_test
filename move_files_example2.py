@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # __author__ = 'guillaume auzias, guillaume.auzias@gmail.com'
+#____a un tout petit KIKI
 
 import os
 import shutil
